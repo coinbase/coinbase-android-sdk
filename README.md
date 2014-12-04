@@ -2,7 +2,7 @@
 
 Integrate bitcoin into your android application with Coinbase's fully featured bitcoin payments API. Coinbase allows all major operations in bitcoin through one API. For more information, visit https://coinbase.com/docs/api/overview.
 
-TODO(aianus) link to example repo
+Also see a fully functional [example application](https://github.com/coinbase/coinbase-android-sdk-example)
 
 ## Installation
 
@@ -112,7 +112,7 @@ protected void onNewIntent(final Intent intent) {
 }
 ```
 
-// TODO(aianus) link to example
+See the above code as part of a fully functional application at [example application](https://github.com/coinbase/coinbase-android-sdk-example)
 
 ## Usage
 
