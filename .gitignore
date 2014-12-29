@@ -30,4 +30,5 @@ libs/
 
 # Maven
 release.properties
+*.asc
 
