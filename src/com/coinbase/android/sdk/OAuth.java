@@ -8,7 +8,6 @@ import android.content.Context;
 import android.content.Intent;
 import android.content.SharedPreferences;
 import android.net.Uri;
-import android.preference.PreferenceManager;
 
 import com.coinbase.api.Coinbase;
 import com.coinbase.api.CoinbaseBuilder;
@@ -19,7 +18,8 @@ import com.coinbase.api.exception.UnauthorizedException;
 
 public class OAuth {
 
-    public static String KEY_LOGIN_CSRF_TOKEN = "com.coinbase.android.sdk.login_csrf_token";
+    private static final String KEY_COINBASE_PREFERENCES = "com.coinbase.android.sdk";
+    private static final String KEY_LOGIN_CSRF_TOKEN = "com.coinbase.android.sdk.login_csrf_token";
 
     public static void beginAuthorization(Context context, String clientId,
             String scope, String redirectUri, OAuthCodeRequest.Meta meta)
@@ -65,7 +65,7 @@ public class OAuth {
     }
 
     public static String getLoginCSRFToken(Context context) {
-        SharedPreferences prefs = PreferenceManager.getDefaultSharedPreferences(context);
+        SharedPreferences prefs = context.getSharedPreferences(KEY_COINBASE_PREFERENCES, Context.MODE_PRIVATE);
 
         int result = prefs.getInt(KEY_LOGIN_CSRF_TOKEN, 0);
         if (result == 0) {
@@ -75,6 +75,6 @@ public class OAuth {
             e.commit();
         }
 
-        return new Integer(result).toString();
+        return Integer.toString(result);
     }
 }
