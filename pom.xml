@@ -11,7 +11,7 @@
     <groupId>com.coinbase.android</groupId>
     <artifactId>coinbase-android-sdk</artifactId>
     <packaging>jar</packaging>
-    <version>1.0.0</version>
+    <version>1.0.1</version>
 
     <name>Coinbase Android SDK</name>
     <description></description>

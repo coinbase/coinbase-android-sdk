@@ -12,14 +12,14 @@ Add the following dependency to your project's Maven pom.xml:
 <dependency>
   <groupId>com.coinbase.android</groupId>
   <artifactId>coinbase-android-sdk</artifactId>
-  <version>1.0.0</version>
+  <version>1.0.1</version>
 </dependency>
 ```
 
 If you're using Android Studio with Gradle, the equivalent dependency would be
 
 ```gradle
-compile ('com.coinbase.android:coinbase-android-sdk:1.0.0')
+compile ('com.coinbase.android:coinbase-android-sdk:1.0.1')
 ```
 
 The library will automatically be pulled from Maven Central.
@@ -33,7 +33,7 @@ git clone git@github.com:coinbase/coinbase-android-sdk.git
 cd coinbase-android-sdk
 mvn dependency:copy-dependencies -DincludeScope=runtime -DoutputDirectory=$YOUR_JAR_DIRECTORY
 mvn package
-cp target/coinbase-android-sdk-1.0.0.jar $YOUR_JAR_DIRECTORY
+cp target/coinbase-android-sdk-1.0.1.jar $YOUR_JAR_DIRECTORY
 ```
 
 ## Authentication
