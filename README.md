@@ -34,6 +34,7 @@ cd coinbase-android-sdk
 mvn dependency:copy-dependencies -DincludeScope=runtime -DoutputDirectory=$YOUR_JAR_DIRECTORY
 mvn package
 cp target/coinbase-android-sdk-1.0.1.jar $YOUR_JAR_DIRECTORY
+rm $YOUR_JAR_DIRECTORY/httpclient-4.0.1.jar
 ```
 
 ## Authentication
